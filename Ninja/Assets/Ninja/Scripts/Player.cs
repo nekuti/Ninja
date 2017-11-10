@@ -5,7 +5,7 @@ using UnityEngine;
 /// <summary>
 /// Playerのクラス
 /// 作成者:小嶋 佑太
-/// 最終更新:2017/11/09
+/// 最終更新:2017/11/10
 /// </summary>
 namespace Kojima
 {
