@@ -1,0 +1,16 @@
+diff a/Ninja/Library/CurrentLayout.dwlt b/Ninja/Library/CurrentLayout.dwlt	(rejected hunks)
+@@ -13,10 +13,10 @@
+   m_EditorClassIdentifier: 
+   m_PixelRect:
+     serializedVersion: 2
+-    x: -1920
+-    y: 83
+-    width: 1920
+-    height: 997
++    x: 8
++    y: 51
++    width: 1520
++    height: 765
+   m_ShowMode: 4
+   m_Title: 
+   m_RootView: {fileID: 10}
