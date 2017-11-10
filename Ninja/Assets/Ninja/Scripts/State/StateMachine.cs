@@ -7,54 +7,57 @@ using UnityEngine;
 /// 作成者:小嶋 佑太
 /// 最終更新:2017/11/06
 /// </summary>
-public class StateMachine
+namespace Kojima
 {
-    #region メンバ変数
-
-    // 現在のState
-    private State<T> currentState;
-
-    #endregion
-
-    #region メソッド
-
-    /// <summary>
-    /// コンストラクタ
-    /// </summary>
-    public StateMachine()
+    public class StateMachine<T>
     {
-        currentState = null;
-    }
+        #region メンバ変数
 
-    public State<T> CurrentState
-    {
-        get { return currentState; }
-    }
+        // 現在のState
+        private State<T> currentState;
 
-    /// <summary>
-    /// Stateを遷移
-    /// </summary>
-    /// <param name="state"></param>
-    public void ChangeState(State<T> state)
-    {
-        if (currentState != null)
+        #endregion
+
+        #region メソッド
+
+        /// <summary>
+        /// コンストラクタ
+        /// </summary>
+        public StateMachine()
         {
-            currentState.Exit();
+            currentState = null;
         }
-        currentState = state;
-        currentState.Enter();
-    }
 
-    /// <summary>
-    /// 更新処理
-    /// </summary>
-    public void Update()
-    {
-        if (currentState != null)
+        public State<T> CurrentState
         {
-            currentState.Execute();
+            get { return currentState; }
         }
-    }
 
-    #endregion
+        /// <summary>
+        /// Stateを遷移
+        /// </summary>
+        /// <param name="state"></param>
+        public void ChangeState(State<T> state)
+        {
+            if (currentState != null)
+            {
+                currentState.Exit();
+            }
+            currentState = state;
+            currentState.Enter();
+        }
+
+        /// <summary>
+        /// 更新処理
+        /// </summary>
+        public void Update()
+        {
+            if (currentState != null)
+            {
+                currentState.Execute();
+            }
+        }
+
+        #endregion
+    }
 }

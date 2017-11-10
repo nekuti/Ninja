@@ -4,15 +4,6 @@ using UnityEngine;
 
 
 /// <summary>
-/// 手のステートの種類
-/// </summary>
-public enum HandStateType
-{
-    Wire,
-    Weapon,
-}
-
-/// <summary>
 /// ワイヤーの種類
 /// </summary>
 public enum WireType
